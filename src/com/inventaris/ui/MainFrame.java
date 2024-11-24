@@ -165,20 +165,17 @@ public class MainFrame extends javax.swing.JFrame {
     private void jPanel1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jPanel1PropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1PropertyChange
-
+//Menambahkan fungsi tombol tambah
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
 btnTambah.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e) {
         tambahBarang();
     }
-
-    
-   
 });
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTambahActionPerformed
-
+// Menambahkan Fungsi Tombol Hapus
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
 btnHapus.addActionListener(new ActionListener() {
     @Override
@@ -188,12 +185,12 @@ btnHapus.addActionListener(new ActionListener() {
 });
         // TODO add your handling code here:
     }//GEN-LAST:event_btnHapusActionPerformed
-
+// Menambahkan Funsgi Tombol Keluar
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnKeluarActionPerformed
 private ArrayList<Barang> daftarBarang = new ArrayList<>();
-
+// Menambahkan Fungsi Tambah Barang
 private void tambahBarang() {
     String kode = txtKode.getText();
     String nama = txtNama.getText();
@@ -201,18 +198,18 @@ private void tambahBarang() {
     daftarBarang.add(new Barang(kode, nama, jumlah));
     refreshTable();
     
-    // Validasi input
+    // Menambahkan Validasi input
     if (kode.isEmpty() || nama.isEmpty() || jumlah <= 0) {
         JOptionPane.showMessageDialog(this, "Isi data dengan benar!", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
     
-    // Bersihkan input
+    // Menambahkan Fungsi Bersihkan input
     txtKode.setText("");
     txtNama.setText("");
     txtJumlah.setText("");
 }
-
+// Menambahkan Fungsi Hapus Barang
 private void hapusBarang() {
     int selectedRow = tabelBarang.getSelectedRow();
     if (selectedRow >= 0) {
@@ -220,6 +217,7 @@ private void hapusBarang() {
         refreshTable();
     }
 }
+// Menambahkan Fungsi Refresh Tabel apabila data berubah
 private void refreshTable() {
     DefaultTableModel model = (DefaultTableModel) tabelBarang.getModel();
     model.setRowCount(0); // Bersihkan data tabel sebelumnya
