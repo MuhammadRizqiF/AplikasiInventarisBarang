@@ -190,20 +190,9 @@ btnHapus.addActionListener(new ActionListener() {
     }//GEN-LAST:event_btnHapusActionPerformed
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
-btnKeluar.addActionListener(new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        keluarAplikasi();
-    }
-
-    private void keluarAplikasi() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-});
         // TODO add your handling code here:
     }//GEN-LAST:event_btnKeluarActionPerformed
-
-    private ArrayList<Barang> daftarBarang = new ArrayList<>();
+private ArrayList<Barang> daftarBarang = new ArrayList<>();
 
 private void tambahBarang() {
     String kode = txtKode.getText();
